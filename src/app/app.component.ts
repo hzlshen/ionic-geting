@@ -22,6 +22,7 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     
+    //底部栏tab
     this.tab1=HomePage;
     this.tab2 = SettingPage;
     

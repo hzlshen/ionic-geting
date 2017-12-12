@@ -1,17 +1,131 @@
+<!--头部-->
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar color="primary">
+    <!--//添加按钮-->
+    <ion-buttons start>
+      <button ion-button icon-only (click)="addStudent()">
+        <ion-icon name="add"></ion-icon>添加
+      </button>
+    </ion-buttons>
+
+    <!--搜索框-->
+    <ion-searchbar (input)="getItems($event)">
+    </ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<!--内容-->
+<ion-content>
+  <ion-list>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/1.jpg">
+      </ion-avatar>
+      <h2>尼古拉</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        小强
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/2.jpg">
+      </ion-avatar>
+      <h2>狄拉克</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        毛姆
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/3.jpg">
+      </ion-avatar>
+      <h2>来辛</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        老王
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/5.jpg">
+      </ion-avatar>
+      <h2>海森堡</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        测得准
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/2.jpg">
+      </ion-avatar>
+      <h2>薛定谔</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        你的猫
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/1.jpg">
+      </ion-avatar>
+      <h2>索罗</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        光头强
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/3.jpg">
+      </ion-avatar>
+      <h2>不准道人</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        决定
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/2.jpg">
+      </ion-avatar>
+      <h2>牛顿</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        皇家
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/4.jpg">
+      </ion-avatar>
+      <h2>理查德</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        盖伦
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/1.jpg">
+      </ion-avatar>
+      <h2>小垃圾</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        厉害了
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="getInfo()">
+      <ion-avatar item-start>
+        <img src="assets/img/5.jpg">
+      </ion-avatar>
+      <h2>我的天</h2>
+      <p>136111111111</p>
+      <ion-note item-end>
+        你真棒
+      </ion-note>
+    </ion-item>
+  </ion-list>
 </ion-content>
