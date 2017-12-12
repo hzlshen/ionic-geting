@@ -6,13 +6,38 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>setting</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>设置</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-list>
+    <ion-item (click)="invite()">
+      <ion-icon name="share" item-start></ion-icon>
+      邀请
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="profile()">
+      <ion-icon name="contact" item-start></ion-icon>
+      个人信息
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="sign()">
+      <ion-icon name="clipboard" item-start></ion-icon>
+      打卡签到
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="records()">
+      <ion-icon name="clipboard" item-start></ion-icon>
+      签到记录
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
 
+  <ion-row padding>
+    <button ion-button color="danger" block padding (click)="logout()">退出</button>
+  </ion-row>
 </ion-content>

@@ -10,5 +10,20 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-
+  
+  getInfo(){
+  
+  }
+  
+  addStudent(){
+  
+  }
+  
+  invite(){
+  
+  }
+  
+  getItems(){
+  
+  }
 }
