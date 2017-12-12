@@ -1,9 +1,4 @@
-<!--
-  Generated template for the CreatePage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -13,6 +8,23 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-item>
+    <!--输入账号-->
+    <ion-icon item-left name="call" color="primary"></ion-icon>
+    <ion-input type="text" placeholder="请输入账号" #mobile></ion-input>
+  </ion-item>
+  <!--姓名-->
+  <ion-item>
+    <ion-icon item-left name="key" color="primary"></ion-icon>
+    <ion-input type="text" placeholder="请输入姓名"></ion-input>
+  </ion-item>
+
+  <!--添加-->
+  <ion-row padding>
+    <button ion-button block color="primary">
+      添加
+    </button>
+  </ion-row>
 
 </ion-content>
