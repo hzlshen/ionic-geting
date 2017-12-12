@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {MyApp} from "../../app/app.component";
+import {RegisterPage} from "../register/register";
 
 @IonicPage()
 @Component({
@@ -16,6 +11,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+  
+  login(){
+    this.navCtrl.push(MyApp);
+  }
+  
+  register(){
+    this.navCtrl.push(RegisterPage);
   }
 
   ionViewDidLoad() {

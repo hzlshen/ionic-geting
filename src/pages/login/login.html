@@ -1,12 +1,38 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>登录</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <!--账号-->
+  <ion-item>
+    <ion-icon item-left name="call" color="primary"></ion-icon>
+    <ion-input type="text" placeholder="请输入账号"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon item-left name="key" color="primary"></ion-icon>
+    <ion-input type="password" placeholder="请输入密码" #password></ion-input>
+  </ion-item>
+  <!--忘记密码-->
+  <ion-item>
+    <ion-label>机构</ion-label>
+    <ion-select icon-right [(ngModel)]="org">
+      <option value="123456">好玩Art</option>
+    </ion-select>
+  </ion-item>
+  <ion-item no-lines>
+    <label item-left (click)="register()">快速注册</label>
+    <label item-right>忘记密码</label>
+  </ion-item>
 
+  <!--登录-->
+  <div margin-left="10" margin-right="10">
+    <button ion-button block color="primary" (click)="login(username,password)">
+      登录
+    </button>
+  </div>
 </ion-content>
