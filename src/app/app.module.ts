@@ -16,6 +16,7 @@ import {LoginPage} from "../pages/login/login";
 import {InvitePage} from "../pages/invite/invite";
 import {RegisterPage} from "../pages/register/register";
 import {CreatePage} from "../pages/create/create";
+import {CommentPage} from "../pages/comment/comment";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {CreatePage} from "../pages/create/create";
     LoginPage,
     InvitePage,
     RegisterPage,
-    CreatePage
+    CreatePage,
+    CommentPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import {CreatePage} from "../pages/create/create";
     LoginPage,
     InvitePage,
     RegisterPage,
-    CreatePage
+    CreatePage,
+    CommentPage,
   ],
   providers: [
     StatusBar,
