@@ -1,18 +1,66 @@
-<!--
-  Generated template for the StudentPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>student</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>盖亚</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+<ion-card>
 
+  <ion-card-content>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="asssets/img/1.jpg">
+      </ion-avatar>
+      <h2>牛顿</h2>
+      <p>1366777777777</p>
+    </ion-item>
+    <button ion-button block (click)="invite()">邀请</button>
+  </ion-card-content>
+
+  <ion-card style="border-top:4px solid darkred;">
+
+    <ion-card-content>
+      <ion-item (click)="postComment()">
+        <ion-thumbnail item-start>
+          <img src="assets/img/11.jpg">
+        </ion-thumbnail>
+        <h2>分享一些关于牛顿的故事</h2>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card style="border-top:solid orange 4px">
+    <ion-card-content>
+      <ion-item (click)="timeline()">
+        <ion-thumbnail item-start>
+          <img src="assets/img/10.jpg">
+        </ion-thumbnail>
+        <h2>查看牛顿的时间轴</h2>
+        <p>2017.5.5</p>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card style="border-top:solid dodgerblue 4px">
+
+    <ion-card-content>
+      <ion-item (click)="records()">
+        <ion-thumbnail item-start>
+          <img src="assets/img/15.jpg">
+        </ion-thumbnail>
+        <h2>牛顿的签到记录</h2>
+        <p>2017.5.5</p>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-card>
 </ion-content>

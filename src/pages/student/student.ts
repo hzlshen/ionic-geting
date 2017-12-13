@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {CommentPage} from "../comment/comment";
+import {TimelinePage} from "../timeline/timeline";
+import {InviteModePage} from "../invite-mode/invite-mode";
+import {RecordPage} from "../record/record";
 
 /**
  * Generated class for the StudentPage page.
@@ -20,6 +24,21 @@ export class StudentPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StudentPage');
+  }
+
+  postComment(){
+    this.navCtrl.push(CommentPage);
+  }
+
+  timeline(){
+    this.navCtrl.push(TimelinePage);
+  }
+  invite(){
+    this.navCtrl.push(InviteModePage);
+  }
+
+  records(){
+    this.navCtrl.push(RecordPage);
   }
 
 }
