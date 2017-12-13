@@ -17,6 +17,9 @@ import {InvitePage} from "../pages/invite/invite";
 import {RegisterPage} from "../pages/register/register";
 import {CreatePage} from "../pages/create/create";
 import {CommentPage} from "../pages/comment/comment";
+import {TimelinePage} from "../pages/timeline/timeline";
+import {InviteModePage} from "../pages/invite-mode/invite-mode";
+import {RecordAllPage} from "../pages/record-all/record-all";
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import {CommentPage} from "../pages/comment/comment";
     InvitePage,
     RegisterPage,
     CreatePage,
-    CommentPage
+    CommentPage,
+    TimelinePage,
+    InviteModePage,
+    RecordAllPage
   ],
   imports: [
     BrowserModule,
@@ -51,6 +57,9 @@ import {CommentPage} from "../pages/comment/comment";
     RegisterPage,
     CreatePage,
     CommentPage,
+    TimelinePage,
+    InviteModePage,
+    RecordAllPage
   ],
   providers: [
     StatusBar,

@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the CommentPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import {ActionSheetController, IonicPage, NavController, NavParams} from 'ionic-angular';
+import { ImagePicker } from '@ionic-native/image-picker';
+import {Camera} from '@ionic-native/camera';
 @IonicPage()
 @Component({
   selector: 'page-comment',
@@ -15,8 +9,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CommentPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public actionSheetCtrl:ActionSheetController,
+    public imagePicker:ImagePicker,
+    public camera: Camera
+  ) {
+  
   }
+  
+  //时间
+  defaultTime = "2017-09-12";
+  
+  images = new Array();
+  
+  getImage(){
+    this.imagePicker.getPictures("{maximumImagesCount:5}").then((results) => {
+      for (var i = 0; i < results.length; i++) {
+        this.images.push(results[i]);
+        console.log('图片URI: ' + results[i]);
+      }
+    }, (err) => { });
+  }
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CommentPage');

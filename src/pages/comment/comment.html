@@ -1,18 +1,32 @@
-<!--
-  Generated template for the CommentPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>comment</ion-title>
+    <ion-title>评价</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-item no-lines>
+    <button ion-button block outline large class="addPhoto" (click)="chooseImageType()">添加照片</button>
+  </ion-item>
+  <ion-row padding>
+      <ion-col *ngFor="let item of images; let num = index">
+        <img src="{{item}}" style="min-height: 100%">
+      </ion-col>
+  </ion-row>
+  <ion-item no-lines>
+    <ion-label>上课日期</ion-label>
+    <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="defaultTime">
+    </ion-datetime>
+    <ion-icon name="md-arrow-dropdown"></ion-icon>
+  </ion-item>
+  <ion-item no-lines>
+    <textarea placeholder="输入评价"></textarea>
+  </ion-item>
 
+  <div padding>
+    <button ion-button block>发布</button>
+  </div>
 </ion-content>
