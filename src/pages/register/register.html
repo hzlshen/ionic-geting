@@ -1,7 +1,7 @@
 
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>注册</ion-title>
   </ion-navbar>
 
@@ -12,6 +12,24 @@
   <ion-item>
     <ion-label fixed>账号</ion-label>
     <ion-icon name="heart"></ion-icon>
-    <ion-input type="text" placeholder="请输入账号"></ion-input>
+    <ion-input #username type="text" placeholder="请输入账号"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label fixed>验证码</ion-label>
+    <ion-input type="password" placeholder="请输入验证码" #code></ion-input>
+    <button item-right ion-button color="danger" medium (click)="getCode()">获取验证码</button>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>密码</ion-label>
+    <ion-input type="password" placeholder="请输入密码" #password></ion-input>
+  </ion-item>
+  <ion-item no-lines>
+    <label item-right (click)="login()">快速登录</label>
+  </ion-item>
+
+  <div margin-left="10" margin-right="10">
+    <button ion-button block color="primary" (click)="doRegister(username,password,code)">
+      注册
+    </button>
+  </div>
 </ion-content>
