@@ -25,7 +25,7 @@ export class CommentPage {
   images = new Array();
   
   getImage(){
-    this.imagePicker.getPictures("{maximumImagesCount:5}").then((results) => {
+    this.imagePicker.getPictures({maximumImagesCount:5}).then((results) => {
       for (var i = 0; i < results.length; i++) {
         this.images.push(results[i]);
         console.log('图片URI: ' + results[i]);

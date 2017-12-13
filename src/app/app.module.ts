@@ -20,6 +20,8 @@ import {CommentPage} from "../pages/comment/comment";
 import {TimelinePage} from "../pages/timeline/timeline";
 import {InviteModePage} from "../pages/invite-mode/invite-mode";
 import {RecordAllPage} from "../pages/record-all/record-all";
+import {ImagePicker} from "@ionic-native/image-picker";
+import {Camera} from "@ionic-native/camera";
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import {RecordAllPage} from "../pages/record-all/record-all";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ImagePicker,
+    Camera
   ]
 })
 export class AppModule {}
