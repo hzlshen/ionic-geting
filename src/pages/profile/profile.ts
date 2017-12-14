@@ -24,58 +24,58 @@ export class ProfilePage {
   }
   
   avatar;
-  
   getImage(){
-    this.imagePicker.getPictures({maximumImagesCount:1}).then((results)=>{
-      for(var i = 0;i<results.length;i++){
-        console.log("Image URI"+results[i]);
-        this.avatar = results[i];
+    this.imagePicker.getPictures({maximumImagesCount:1}).then((results) => {
+      for (var i = 0; i < results.length; i++) {
+        console.log('Image URI: ' + results[i]);
+        this.avatar=results[i];
       }
-    },(err)=>{})
+    }, (err) => { });
   }
   
   getPhoto(){
-    const options:CameraOptions = {
-      quality:100,
-      destinationType:this.camera.DestinationType.DATA_URL,
-      encodingType:this.camera.EncodingType.JPEG,
-      mediaType:this.camera.MediaType.PICTURE
+    
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
     }
-    this.camera.getPicture(options).then((imageData)=>{
-      this.avatar = imageData;
-    },(err)=>{
-      console.log(err);
+    this.camera.getPicture(options).then((imageData) => {
+      this.avatar=imageData;
+      // imageData is either a base64 encoded string or a file URI
+      // If it's base64:
+      //let base64Image = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+      // Handle error
     });
   }
   
-  chooseImageType(){
+  chooseImageType() {
     let actionSheet = this.actionSheetCtrl.create({
-      title:'',
-      buttons:[
+      title: '',
+      buttons: [
         {
-          text:'拍照',
-          handler:()=>{
+          text: '拍照',
+          handler: () => {
             this.getPhoto();
             console.log('拍照 clicked');
           }
-        },
-        {
-          text:'相册',
-          handler:()=>{
-            this.getPhoto();
+        },{
+          text: '相册',
+          handler: () => {
+            this.getImage();
             console.log('相册 clicked');
           }
-        },
-        {
-          text:'取消',
-          role:'cancel',
-          handler:()=>{
-            this.getPhoto();
+        },{
+          text: '取消',
+          role: 'cancel',
+          handler: () => {
             console.log('取消 clicked');
           }
         }
       ]
-    })
+    });
     actionSheet.present();
   }
 
